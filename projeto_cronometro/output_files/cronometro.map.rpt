@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cronometro
-Fri Jan 31 17:29:39 2025
+Wed Feb  5 10:22:46 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -10,7 +10,18 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +48,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Jan 31 17:29:39 2025              ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb  5 10:22:46 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; cronometro                                     ;
 ; Top-level Entity Name              ; cronometro                                     ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; N/A until Partition Merge                      ;
-;     Total combinational functions  ; N/A until Partition Merge                      ;
-;     Dedicated logic registers      ; N/A until Partition Merge                      ;
-; Total registers                    ; N/A until Partition Merge                      ;
-; Total pins                         ; N/A until Partition Merge                      ;
-; Total virtual pins                 ; N/A until Partition Merge                      ;
-; Total memory bits                  ; N/A until Partition Merge                      ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
-; Total PLLs                         ; N/A until Partition Merge                      ;
+; Total logic elements               ; 208                                            ;
+;     Total combinational functions  ; 187                                            ;
+;     Dedicated logic registers      ; 89                                             ;
+; Total registers                    ; 89                                             ;
+; Total pins                         ; 58                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
 
 
@@ -149,11 +160,253 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; cronometro.vhd                   ; yes             ; User VHDL File               ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd                     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/isaac/intelFPGA_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/isaac/intelFPGA_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/isaac/intelFPGA_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; /home/isaac/intelFPGA_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc      ;         ;
+; db/lpm_divide_m9m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/lpm_divide_m9m.tdf              ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/sign_div_unsign_bkh.tdf         ;         ;
+; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/alt_u_div_a4f.tdf               ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/add_sub_7pc.tdf                 ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/add_sub_8pc.tdf                 ;         ;
+; db/lpm_divide_hhm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/lpm_divide_hhm.tdf              ;         ;
+; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/sign_div_unsign_9kh.tdf         ;         ;
+; db/alt_u_div_64f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/alt_u_div_64f.tdf               ;         ;
+; db/lpm_divide_i9m.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/lpm_divide_i9m.tdf              ;         ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/sign_div_unsign_7kh.tdf         ;         ;
+; db/alt_u_div_24f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/alt_u_div_24f.tdf               ;         ;
+; db/lpm_divide_fhm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/lpm_divide_fhm.tdf              ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 208     ;
+;                                             ;         ;
+; Total combinational functions               ; 187     ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 41      ;
+;     -- 3 input functions                    ; 42      ;
+;     -- <=2 input functions                  ; 104     ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 128     ;
+;     -- arithmetic mode                      ; 59      ;
+;                                             ;         ;
+; Total registers                             ; 89      ;
+;     -- Dedicated logic registers            ; 89      ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 58      ;
+;                                             ;         ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; clk_1hz ;
+; Maximum fan-out                             ; 63      ;
+; Total fan-out                               ; 844     ;
+; Average fan-out                             ; 2.15    ;
++---------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |cronometro                            ; 187 (110)           ; 89 (89)                   ; 0           ; 0            ; 0       ; 0         ; 58   ; 0            ; |cronometro                                                                                                 ; cronometro          ; work         ;
+;    |lpm_divide:Div0|                   ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_hhm:auto_generated|  ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Div0|lpm_divide_hhm:auto_generated                                                   ; lpm_divide_hhm      ; work         ;
+;          |sign_div_unsign_9kh:divider| ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;             |alt_u_div_64f:divider|    ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
+;    |lpm_divide:Div1|                   ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_fhm:auto_generated|  ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Div1|lpm_divide_fhm:auto_generated                                                   ; lpm_divide_fhm      ; work         ;
+;          |sign_div_unsign_7kh:divider| ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Div1|lpm_divide_fhm:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;             |alt_u_div_24f:divider|    ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Div1|lpm_divide_fhm:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_24f:divider ; alt_u_div_24f       ; work         ;
+;    |lpm_divide:Mod0|                   ; 36 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_m9m:auto_generated|  ; 36 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m      ; work         ;
+;          |sign_div_unsign_bkh:divider| ; 36 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
+;             |alt_u_div_a4f:divider|    ; 36 (36)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f       ; work         ;
+;    |lpm_divide:Mod1|                   ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_i9m:auto_generated|  ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Mod1|lpm_divide_i9m:auto_generated                                                   ; lpm_divide_i9m      ; work         ;
+;          |sign_div_unsign_7kh:divider| ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Mod1|lpm_divide_i9m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;             |alt_u_div_24f:divider|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cronometro|lpm_divide:Mod1|lpm_divide_i9m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_24f:divider ; alt_u_div_24f       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; min_display[8]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; min_display[9]~reg0                   ; Stuck at GND due to stuck port data_in ;
+; min_display[13]~reg0                  ; Stuck at VCC due to stuck port data_in ;
+; min_display[22]~reg0                  ; Stuck at GND due to stuck port data_in ;
+; min_display[23]~reg0                  ; Stuck at GND due to stuck port data_in ;
+; min_display[27]~reg0                  ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 6 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 89    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 37    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 50    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                ;
+; LPM_WIDTHD             ; 6              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_hhm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_i9m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_fhm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 58                          ;
+; cycloneiii_ff         ; 89                          ;
+;     CLR               ; 37                          ;
+;     ENA               ; 50                          ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 189                         ;
+;     arith             ; 59                          ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 17                          ;
+;     normal            ; 130                         ;
+;         0 data inputs ; 10                          ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 43                          ;
+;         3 data inputs ; 25                          ;
+;         4 data inputs ; 41                          ;
+;                       ;                             ;
+; Max LUT depth         ; 9.20                        ;
+; Average LUT depth     ; 4.36                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,7 +415,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Fri Jan 31 17:29:34 2025
+    Info: Processing started: Wed Feb  5 10:22:40 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cronometro -c cronometro
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -170,58 +423,77 @@ Info (12021): Found 2 design units, including 1 entities, in source file cronome
     Info (12022): Found design unit 1: cronometro-behavior File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 14
     Info (12023): Found entity 1: cronometro File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 5
 Info (12127): Elaborating entity "cronometro" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at cronometro.vhd(44): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Warning (10631): VHDL Process Statement warning at cronometro.vhd(58): inferring latch(es) for signal or variable "clk_count", which holds its previous value in one or more paths through the process File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[0]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[1]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[2]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[3]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[4]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[5]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[6]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[7]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[8]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[9]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[10]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[11]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[12]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[13]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[14]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[15]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[16]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[17]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[18]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[19]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[20]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[21]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[22]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[23]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[24]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Info (10041): Inferred latch for "clk_count[25]" at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[25]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10029): Constant driver at cronometro.vhd(58) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 58
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[24]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[23]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[22]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[21]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[20]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[19]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[18]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[17]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[16]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[15]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[14]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[13]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[12]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[11]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[10]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[9]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (10028): Can't resolve multiple constant drivers for net "clk_count[8]" at cronometro.vhd(44) File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 44
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 20 errors, 3 warnings
-    Error: Peak virtual memory: 399 megabytes
-    Error: Processing ended: Fri Jan 31 17:29:39 2025
-    Error: Elapsed time: 00:00:05
-    Error: Total CPU time (on all processors): 00:00:12
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 89
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 90
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 92
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 93
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 89
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 89
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m9m.tdf
+    Info (12023): Found entity 1: lpm_divide_m9m File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/lpm_divide_m9m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/sign_div_unsign_bkh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
+    Info (12023): Found entity 1: alt_u_div_a4f File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/alt_u_div_a4f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 90
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 90
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hhm.tdf
+    Info (12023): Found entity 1: lpm_divide_hhm File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/lpm_divide_hhm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9kh File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/sign_div_unsign_9kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_64f.tdf
+    Info (12023): Found entity 1: alt_u_div_64f File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/alt_u_div_64f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod1" File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 92
+Info (12133): Instantiated megafunction "lpm_divide:Mod1" with the following parameter: File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 92
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i9m.tdf
+    Info (12023): Found entity 1: lpm_divide_i9m File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/lpm_divide_i9m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/sign_div_unsign_7kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_24f.tdf
+    Info (12023): Found entity 1: alt_u_div_24f File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/alt_u_div_24f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 93
+Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 93
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_fhm.tdf
+    Info (12023): Found entity 1: lpm_divide_fhm File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/db/lpm_divide_fhm.tdf Line: 25
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "min_display[8]" is stuck at GND File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 79
+    Warning (13410): Pin "min_display[9]" is stuck at GND File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 79
+    Warning (13410): Pin "min_display[13]" is stuck at VCC File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 79
+    Warning (13410): Pin "min_display[22]" is stuck at GND File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 79
+    Warning (13410): Pin "min_display[23]" is stuck at GND File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 79
+    Warning (13410): Pin "min_display[27]" is stuck at VCC File: /home/isaac/Documents/estudoVHDL/projeto_cronometro/cronometro.vhd Line: 79
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 287 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 229 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 498 megabytes
+    Info: Processing ended: Wed Feb  5 10:22:46 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:12
 
 

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Feb  5 13:02:52 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : cronometro2
+Top-level Entity Name : cronometro2
+Family : Cyclone IV E
+Total logic elements : 201
+    Total combinational functions : 200
+    Dedicated logic registers : 76
+Total registers : 76
+Total pins : 24
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

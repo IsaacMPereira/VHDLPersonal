@@ -1,0 +1,4 @@
+v 4
+file . "cronometro.vhd" "ab9c67e862f048c43102d5db266f75e8ee1df90f" "20250203155306.898":
+  entity cronometro at 1( 0) + 0 on 11;
+  architecture behavior of cronometro at 14( 451) + 0 on 12;
