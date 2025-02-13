@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Feb 12 12:39:44 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : crono1
+Top-level Entity Name : crono1
+Family : Cyclone IV E
+Device : EP4CE6F17C8
+Timing Models : Final
+Total logic elements : 104 / 6,272 ( 2 % )
+    Total combinational functions : 103 / 6,272 ( 2 % )
+    Dedicated logic registers : 38 / 6,272 ( < 1 % )
+Total registers : 38
+Total pins : 16 / 180 ( 9 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

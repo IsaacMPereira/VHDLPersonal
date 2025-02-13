@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
--- DATE "02/05/2025 13:03:01"
+-- DATE "02/12/2025 10:08:18"
 
 -- 
 -- Device: Altera EP4CE6F17C8 Package FBGA256
@@ -82,8 +82,8 @@ ENTITY 	cronometro2 IS
 	clk : IN std_logic;
 	reset : IN std_logic;
 	start_stop : IN std_logic;
-	display_min : OUT std_logic_vector(6 DOWNTO 0);
-	display_seg : OUT std_logic_vector(13 DOWNTO 0)
+	display_min : BUFFER std_logic_vector(6 DOWNTO 0);
+	display_seg : BUFFER std_logic_vector(13 DOWNTO 0)
 	);
 END cronometro2;
 

@@ -23,7 +23,7 @@ ARCHITECTURE behavior OF cronometro2 IS
 	SIGNAL clk_disp_count : INTEGER RANGE 0 TO 24999 := 0;
 	SIGNAL display_sel : INTEGER RANGE 0 TO 2 := 0;
 	
-	FUNCTION decode_digit (digit : INTEGER) RETURN STD_LOGIC_VECTOR IS
+	FUNCTION decode_digit (digit : INTEGER) RETURN STD_LOGIC_VECTOR IS -- Codificador para 7 segmentos
 	BEGIN
 		CASE digit IS 
 			WHEN 0 => RETURN "1000000";
@@ -127,4 +127,3 @@ ARCHITECTURE behavior OF cronometro2 IS
 	END PROCESS;
 	
 END behavior;
-		
