@@ -1,7 +1,0 @@
-|alarmeVeicular
-k1_porta => buzzer.DATAB
-k2_ing => buzzer.OUTPUTSELECT
-k3_farol => buzzer.DATAA
-buzzer << buzzer.DB_MAX_OUTPUT_PORT_TYPE
-
-

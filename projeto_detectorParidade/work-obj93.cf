@@ -1,7 +1,0 @@
-v 4
-file . "tb_detectorParidade.vhd" "fad8f0e26d8c22625a7c8b0a69a6b5549c332e67" "20250120203846.778":
-  entity tb_detectorparidade at 1( 0) + 0 on 13;
-  architecture behavior of tb_detectorparidade at 7( 101) + 0 on 14;
-file . "detectorParidade.vhd" "7f273b2fb9c9ebc03c104dc50038a2d7690e59ac" "20250120203203.722":
-  entity detectorparidade at 1( 0) + 0 on 11;
-  architecture behavior of detectorparidade at 14( 222) + 0 on 12;
